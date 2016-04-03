@@ -58,8 +58,8 @@ app.post('/', function(req, res){
 		dataArray["url"] = url1;
 		var json = JSON.stringify(dataArray);
 
-		res.type("json");
-		res.send(body);
+		// res.type("json");
+		// res.send(body);
 
 		console.log("END POST BLOCK");
 	});
@@ -75,6 +75,12 @@ app.post('/', function(req, res){
     console.log(result.compressFactor);
     console.log(result.summary.join("\n"));
     console.log("------------------------------------------------------------------------")
+
+	var json = JSON.stringify(result.summary.join("\n"));
+
+	res.type("json");
+	res.send(json);
+
 });
 
 
