@@ -73,10 +73,10 @@ app.post('/', function(req, res){
     console.log(result.title);
     console.log(result.words);
     console.log(result.compressFactor);
-    console.log(result.summary.join("\n"));
+    // console.log(result.summary);
     console.log("------------------------------------------------------------------------")
 
-	var json = JSON.stringify(result.summary.join("\n"));
+	var json = JSON.stringify(result.summary.join("\n").replace(/(\r\n|\n|\r)/gm,""));
 
 	res.type("json");
 	res.send(json);
