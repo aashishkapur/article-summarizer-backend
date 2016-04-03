@@ -1,0 +1,28 @@
+{
+  "name": "article-summarizer-backend",
+  "version": "1.0.0",
+  "description": "the backend for the article-summarizer browser extension",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aashishkapur/article-summarizer-backend.git"
+  },
+  "author": "Aashish Kapur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aashishkapur/article-summarizer-backend/issues"
+  },
+  "homepage": "https://github.com/aashishkapur/article-summarizer-backend",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "node-summary": "^1.1.0",
+    "node-sumuparticles": "^0.1.4",
+    "node-tldr": "^0.4.14",
+    "request": "^2.69.0",
+    "unfluff": "^1.0.0"
+  }
+}
