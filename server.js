@@ -44,7 +44,7 @@ app.post('/', function(req, res){
 			var tempArray = data["objects"][0];
 			// console.log('length: ' + data["objects"].length);
 			// console.log(tempArray["text"]);
-			console.log(tempArray);
+			// console.log(tempArray);
 			console.log("img url: " + tempArray["images"][0]["url"]);
 
 
@@ -73,10 +73,10 @@ app.post('/', function(req, res){
     console.log(result.title);
     console.log(result.words);
     console.log(result.compressFactor);
-    // console.log(result.summary);
+    console.log(result.summary.join("\n").replace(/(\r\n|\n|\r)/gm,""));
     console.log("------------------------------------------------------------------------")
 
-	var json = JSON.stringify(result.summary.join("\n").replace(/(\r\n|\n|\r)/gm,""));
+	var json = JSON.stringify({"summary" : result.summary.join("\n").replace(/(\r\n|\n|\r)/gm,"")});
 
 	res.type("json");
 	res.send(json);
